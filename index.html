@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cortinas & Persianas — cortinas, persianas e redes de descanso sob medida. Solicite seu orçamento pelo WhatsApp.">
+  <title>Roberto Cortinas & Persianas | Sob Medida</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{--dark:#171717;--gold:#b89454;--cream:#f7f3ec;--white:#fff;--text:#292929}
+    body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--cream);line-height:1.5}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{background:var(--dark);color:white;padding:18px 0;position:sticky;top:0;z-index:10}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{font-size:22px;font-weight:800;letter-spacing:.5px}
+    .logo span{color:var(--gold)}
+    nav a{font-size:14px;margin-left:18px;color:#eee}
+    .hero{background:linear-gradient(120deg,rgba(0,0,0,.78),rgba(0,0,0,.38)),url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1800&q=85') center/cover;min-height:650px;display:flex;align-items:center;color:#fff}
+    .hero-content{max-width:680px;padding:80px 0}
+    .eyebrow{text-transform:uppercase;letter-spacing:2px;color:#e2c68f;font-size:13px;font-weight:bold;margin-bottom:14px}
+    h1{font-size:clamp(38px,6vw,68px);line-height:1.02;margin-bottom:20px}
+    .hero p{font-size:19px;max-width:590px;color:#f2f2f2;margin-bottom:30px}
+    .btn{display:inline-block;background:var(--gold);color:#fff;font-weight:800;padding:15px 23px;border-radius:7px;transition:.2s}
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+    .btn.dark{background:var(--dark)}
+    section{padding:75px 0}
+    .section-title{text-align:center;max-width:700px;margin:0 auto 42px}
+    .section-title h2{font-size:36px;margin-bottom:10px}
+    .section-title p{color:#666}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:white;border-radius:14px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,.07)}
+    .card-img{height:230px;background-size:cover;background-position:center}
+    .curtina{background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80')}
+    .persiana{background-image:url('https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80')}
+    .rede{background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80')}
+    .card-body{padding:24px}
+    .card h3{font-size:23px;margin-bottom:8px}
+    .card p{color:#666;margin-bottom:18px}
+    .features{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+    .feature{background:white;padding:25px 18px;border-radius:12px;text-align:center}
+    .feature strong{display:block;font-size:17px;margin-bottom:5px}
+    .feature span{font-size:14px;color:#666}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .gallery div{height:250px;border-radius:12px;background-size:cover;background-position:center}
+    .g1{background-image:url('https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=900&q=80')}
+    .g2{background-image:url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=80')}
+    .g3{background-image:url('https://images.unsplash.com/photo-1615529162924-f8605388461d?auto=format&fit=crop&w=900&q=80')}
+    .cta{background:var(--dark);color:#fff;text-align:center}
+    .cta h2{font-size:40px;margin-bottom:12px}
+    .cta p{color:#ddd;max-width:650px;margin:0 auto 25px}
+    .contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .contact{background:#fff;border-radius:14px;padding:25px;text-align:center;box-shadow:0 8px 25px rgba(0,0,0,.06)}
+    .contact .role{font-size:13px;text-transform:uppercase;letter-spacing:1.2px;color:#a27c3d;font-weight:bold}
+    .contact h3{font-size:24px;margin:6px 0}
+    .contact p{color:#666;margin-bottom:16px}
+    footer{background:#101010;color:#bbb;text-align:center;padding:28px 0;font-size:14px}
+    .float{position:fixed;right:20px;bottom:20px;background:#1eae62;color:#fff;padding:14px 18px;border-radius:50px;font-weight:800;box-shadow:0 8px 25px rgba(0,0,0,.25);z-index:20}
+    @media(max-width:800px){
+      nav a{display:none}
+      .hero{min-height:590px}
+      .cards,.contacts{grid-template-columns:1fr}
+      .features{grid-template-columns:repeat(2,1fr)}
+      .gallery{grid-template-columns:1fr}
+      .gallery div{height:230px}
+      section{padding:55px 0}
+      .cta h2{font-size:31px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">RC <span>Cortinas & Persianas</span></div>
+      <div>
+        <a href="#produtos">Produtos</a>
+        <a href="#trabalhos">Trabalhos</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">RC Cortinas & Persianas</div>
+      <h1>Seu ambiente mais bonito, confortável e elegante.</h1>
+      <p>Cortinas, persianas e redes de descanso sob medida para sua casa ou empresa.</p>
+      <a class="btn" href="#contato">📲 PEDIR ORÇAMENTO</a>
+    </div>
+  </div>
+</section>
+
+<section id="produtos">
+  <div class="container">
+    <div class="section-title">
+      <h2>Soluções para o seu ambiente</h2>
+      <p>Escolha o produto ideal e fale diretamente com nossa equipe.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="card-img curtina"></div>
+        <div class="card-body">
+          <h3>Cortinas Sob Medida</h3>
+          <p>Elegância, aconchego e acabamento personalizado para cada ambiente.</p>
+          <a class="btn dark" href="https://wa.me/5511983189671?text=Ol%C3%A1%21%20Vi%20o%20Instagram%20da%20RC%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20de%20cortinas.">Orçar cortinas</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img persiana"></div>
+        <div class="card-body">
+          <h3>Persianas</h3>
+          <p>Praticidade, controle de luminosidade e visual moderno sob medida.</p>
+          <a class="btn dark" href="https://wa.me/5511989440125?text=Ol%C3%A1%21%20Vi%20o%20Instagram%20da%20RC%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20de%20persianas.">Orçar persianas</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img rede"></div>
+        <div class="card-body">
+          <h3>Redes de Descanso</h3>
+          <p>Conforto e estilo para criar aquele cantinho especial de descanso.</p>
+          <a class="btn dark" href="https://wa.me/5511983189671?text=Ol%C3%A1%21%20Vi%20o%20Instagram%20da%20RC%20e%20quero%20conhecer%20as%20redes%20de%20descanso.">Conhecer redes</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>Por que escolher a RC?</h2>
+      <p>Atendimento próximo e soluções pensadas para o seu espaço.</p>
+    </div>
+    <div class="features">
+      <div class="feature"><strong>📐 Sob medida</strong><span>Produtos personalizados para seu ambiente.</span></div>
+      <div class="feature"><strong>🏠 Residencial</strong><span>Soluções para casas e apartamentos.</span></div>
+      <div class="feature"><strong>🏢 Comercial</strong><span>Também atendemos escritórios e empresas.</span></div>
+      <div class="feature"><strong>🤝 Atendimento</strong><span>Equipe pronta para orientar sua escolha.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="trabalhos">
+  <div class="container">
+    <div class="section-title">
+      <h2>Inspire-se com nossos ambientes</h2>
+      <p>Substitua estas imagens pelas fotos reais dos trabalhos da RC.</p>
+    </div>
+    <div class="gallery">
+      <div class="g1"></div><div class="g2"></div><div class="g3"></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Vamos transformar seu ambiente?</h2>
+    <p>Envie uma foto do ambiente pelo WhatsApp e conte o que você procura. Nossa equipe ajuda você a encontrar a solução ideal.</p>
+    <a class="btn" href="https://wa.me/5511989440125?text=Ol%C3%A1%21%20Vi%20o%20Instagram%20da%20RC%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento.">📲 QUERO MEU ORÇAMENTO</a>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="container">
+    <div class="section-title">
+      <h2>Fale com a nossa equipe</h2>
+      <p>Escolha o contato que você precisa.</p>
+    </div>
+    <div class="contacts">
+      <div class="contact">
+        <div class="role">Vendedora</div><h3>Bianca</h3><p>(11) 98318-9671</p>
+        <a class="btn" href="https://wa.me/5511983189671?text=Ol%C3%A1%20Bianca%21%20Vim%20pelo%20Instagram%20da%20RC%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento.">WhatsApp Bianca</a>
+      </div>
+      <div class="contact">
+        <div class="role">Vendedor</div><h3>Roberto</h3><p>(11) 98944-0125</p>
+        <a class="btn" href="https://wa.me/5511989440125?text=Ol%C3%A1%20Roberto%21%20Vim%20pelo%20Instagram%20da%20RC%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento.">WhatsApp Roberto</a>
+      </div>
+      <div class="contact">
+        <div class="role">Suporte</div><h3>Henrique</h3><p>(11) 99444-5365</p>
+        <a class="btn" href="https://wa.me/5511994445365?text=Ol%C3%A1%20Henrique%21%20Vim%20pelo%20Instagram%20da%20RC%20e%20preciso%20de%20suporte.">WhatsApp Henrique</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 RC Cortinas & Persianas • Instagram: @roberto_cortinasepersianas</p>
+  </div>
+</footer>
+
+<a class="float" href="https://wa.me/5511989440125?text=Ol%C3%A1%21%20Vim%20pelo%20Instagram%20da%20RC%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento.">💬 WhatsApp</a>
+</body>
+</html>
