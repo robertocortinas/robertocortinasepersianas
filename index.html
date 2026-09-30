@@ -59,7 +59,7 @@
     .gallery-photo:hover{transform:scale(1.02);opacity:.92}
     .lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:1000;align-items:center;justify-content:center;padding:30px}
     .lightbox.show{display:flex}
-    .lightbox img{max-width:92vw;max-height:88vh;object-fit:contain;border-radius:10px;box-shadow:0 15px 50px rgba(0,0,0,.45)}
+    .lightbox img{max-width:88vw;max-height:84vh;object-fit:contain;border-radius:10px;box-shadow:0 15px 50px rgba(0,0,0,.45);user-select:none;-webkit-user-drag:none}.lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border:0;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;font-size:38px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;transition:.2s}.lightbox-nav:hover{background:rgba(255,255,255,.28);transform:translateY(-50%) scale(1.05)}.lightbox-prev{left:22px}.lightbox-next{right:22px}.lightbox-counter{position:absolute;top:20px;left:50%;transform:translateX(-50%);color:#fff;background:rgba(0,0,0,.35);padding:7px 12px;border-radius:20px;font-size:14px}.lightbox-hint{bottom:18px}
     .lightbox-close{position:absolute;top:18px;right:25px;color:#fff;background:none;border:0;font-size:40px;line-height:1;cursor:pointer}
     .lightbox-hint{position:absolute;bottom:18px;color:#fff;font-size:14px;opacity:.8}
     .cta{background:var(--dark);color:#fff;text-align:center}
@@ -134,7 +134,7 @@
 <header>
   <div class="container">
     <nav>
-      <div class="logo"><span>Cortinas & Persianas</span></div>
+      <div class="logo">RC <span>Cortinas & Persianas</span></div>
       <div>
         <a href="#produtos">Produtos</a>
         <a href="#trabalhos">Trabalhos</a>
@@ -146,7 +146,7 @@
 <section class="hero">
   <div class="container">
     <div class="hero-content">
-      <div class="eyebrow"> Roberto CORTINAS & PERSIANAS</div>
+      <div class="eyebrow">RC CORTINAS & PERSIANAS</div>
       <h1>Conforto e elegância sob medida para o seu ambiente.</h1>
       <p>Cortinas, persianas e redes de descanso para deixar sua casa ou empresa mais bonita, confortável e funcional.</p>
       <div class="hero-actions">
@@ -298,8 +298,11 @@
 
 <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
   <button class="lightbox-close" aria-label="Fechar" onclick="closeLightbox(event)">×</button>
+  <button class="lightbox-nav lightbox-prev" aria-label="Imagem anterior" onclick="navigateLightbox(-1,event)">‹</button>
   <img id="lightbox-image" src="" alt="">
-  <div class="lightbox-hint">Clique fora da imagem para fechar</div>
+  <button class="lightbox-nav lightbox-next" aria-label="Próxima imagem" onclick="navigateLightbox(1,event)">›</button>
+  <div id="lightbox-counter" class="lightbox-counter"></div>
+  <div class="lightbox-hint">Use as setas, teclado ou deslize para o lado</div>
 </div>
 
 <footer>
@@ -311,20 +314,51 @@
 <a class="float" href="https://wa.me/5511989440125?text=Ol%C3%A1%21%20Vim%20pelo%20Instagram%20da%20Roberto%20Cortinas%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento.">💬 WhatsApp</a>
 
 <script>
+let lightboxImages=[];
+let lightboxIndex=0;
+let touchStartX=0;
+
+function buildLightboxImages(){
+  lightboxImages=[...document.querySelectorAll('.gallery-photo')];
+}
 function openLightbox(img){
-  const box=document.getElementById('lightbox');
+  buildLightboxImages();
+  lightboxIndex=lightboxImages.indexOf(img);
+  if(lightboxIndex<0) lightboxIndex=0;
+  updateLightbox();
+  document.getElementById('lightbox').classList.add('show');
+  document.body.style.overflow='hidden';
+}
+function updateLightbox(){
+  const img=lightboxImages[lightboxIndex];
   const large=document.getElementById('lightbox-image');
   large.src=img.src;
   large.alt=img.alt;
-  box.classList.add('show');
-  document.body.style.overflow='hidden';
+  document.getElementById('lightbox-counter').textContent=(lightboxIndex+1)+' / '+lightboxImages.length;
+}
+function navigateLightbox(direction,event){
+  if(event) event.stopPropagation();
+  if(!lightboxImages.length) buildLightboxImages();
+  lightboxIndex=(lightboxIndex+direction+lightboxImages.length)%lightboxImages.length;
+  updateLightbox();
 }
 function closeLightbox(event){
-  if(event && event.target && event.target.id==='lightbox-image') return;
+  if(event && event.target && ['lightbox-image','lightbox'].indexOf(event.target.id)===-1) return;
   document.getElementById('lightbox').classList.remove('show');
   document.body.style.overflow='';
 }
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
+const lightbox=document.getElementById('lightbox');
+lightbox.addEventListener('touchstart',e=>{touchStartX=e.changedTouches[0].screenX},{passive:true});
+lightbox.addEventListener('touchend',e=>{
+  const dx=e.changedTouches[0].screenX-touchStartX;
+  if(Math.abs(dx)>50) navigateLightbox(dx<0?1:-1);
+},{passive:true});
+document.addEventListener('keydown',e=>{
+  if(!document.getElementById('lightbox').classList.contains('show')) return;
+  if(e.key==='Escape') closeLightbox();
+  if(e.key==='ArrowRight') navigateLightbox(1);
+  if(e.key==='ArrowLeft') navigateLightbox(-1);
+});
 </script>
 
 </body>
