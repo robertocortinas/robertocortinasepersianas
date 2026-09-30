@@ -103,6 +103,31 @@
       .photo-card img{height:240px}
       .float{font-size:14px}
     }
+
+    /* ===== Refinamento visual RC ===== */
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:#f6f2ea}
+    :root{--dark:#151515;--gold:#b89558;--gold2:#d7bb84;--cream:#f6f2ea;--white:#fff;--text:#252525;--muted:#6d6a65;--green:#1faa61}
+    header{background:rgba(21,21,21,.96);backdrop-filter:blur(10px);box-shadow:0 4px 24px rgba(0,0,0,.14)}
+    nav{min-height:54px}
+    .logo{font-size:20px;display:flex;align-items:center;gap:8px}.logo:before{content:'RC';display:grid;place-items:center;width:38px;height:38px;border:1px solid var(--gold);border-radius:10px;color:var(--gold);font-size:15px}.logo span{color:#fff;font-weight:700}
+    nav a{font-weight:700;transition:.2s} nav a:hover{color:var(--gold2)}
+    .hero{min-height:700px;background:linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.58) 48%,rgba(0,0,0,.22) 100%),url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1800&q=85') center/cover}
+    .hero-content{padding:90px 0}.eyebrow{display:inline-block;border:1px solid rgba(215,187,132,.55);padding:8px 12px;border-radius:999px;background:rgba(0,0,0,.18);margin-bottom:20px}
+    h1{max-width:760px;letter-spacing:-1.5px;text-shadow:0 4px 24px rgba(0,0,0,.25)}
+    .hero p{font-size:20px;line-height:1.65}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.btn{border-radius:999px;padding:15px 24px;box-shadow:0 8px 20px rgba(0,0,0,.12)}.btn.outline{background:transparent;border:1px solid rgba(255,255,255,.5)}
+    .trust-strip{background:#fff;border-bottom:1px solid #e9e2d6}.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:18px 0}.trust-item{text-align:center;font-size:14px;font-weight:800;color:#4d4a45}.trust-item span{display:block;color:var(--gold);font-size:20px;margin-bottom:2px}
+    section{padding:82px 0}.section-title h2{font-size:clamp(30px,4vw,42px);letter-spacing:-.6px}.section-title p{font-size:16px}
+    .cards{gap:26px}.card{border:1px solid #ece5da;box-shadow:0 14px 38px rgba(32,24,12,.08);transition:transform .25s,box-shadow .25s}.card:hover{transform:translateY(-7px);box-shadow:0 22px 45px rgba(32,24,12,.13)}.card-img{height:245px}.card-body{padding:26px}.card h3{font-size:24px}.card p{line-height:1.65}
+    .features{gap:18px}.feature{border:1px solid #ebe4d8;box-shadow:0 10px 28px rgba(32,24,12,.05);transition:.2s}.feature:hover{transform:translateY(-4px)}
+    .photo-section{border:1px solid #ebe4d8;box-shadow:0 14px 38px rgba(32,24,12,.07);padding:30px}.photo-section-title h3{font-size:29px}.photo-card{border:1px solid #eee7dc;box-shadow:0 6px 18px rgba(0,0,0,.05)}.photo-card img{height:255px}.photo-card span{background:#fff;font-size:14px;color:#403d38}
+    .cta{position:relative;overflow:hidden;background:linear-gradient(135deg,#111 0%,#24201a 100%)}.cta:before{content:'';position:absolute;width:360px;height:360px;border:1px solid rgba(184,148,84,.25);border-radius:50%;right:-120px;top:-180px}.cta .container{position:relative}.cta h2{font-size:clamp(30px,4vw,46px)}
+    .contacts{gap:22px}.contact{border:1px solid #ebe4d8;box-shadow:0 12px 30px rgba(32,24,12,.06)}.contact .role{color:#9b7437}.contact h3{font-size:25px}.contact .btn{width:100%}
+    .float{right:22px;bottom:22px;background:var(--green);border-radius:999px;padding:15px 21px;box-shadow:0 12px 30px rgba(22,126,69,.3);transition:.2s}.float:hover{transform:translateY(-3px);filter:brightness(1.05)}
+    footer{padding:34px 0}.footer-line{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;color:#aaa}.footer-line strong{color:#ddd}
+    .lightbox{backdrop-filter:blur(5px)}
+    @media(max-width:800px){.hero{min-height:650px}.trust{grid-template-columns:1fr;gap:10px;padding:15px 0}.trust-item{display:flex;align-items:center;justify-content:center;gap:8px}.trust-item span{display:inline;margin:0}.hero-actions{flex-direction:column;align-items:stretch}.hero-actions .btn{width:100%}.photo-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:560px){.logo{font-size:17px}.logo:before{width:34px;height:34px}.hero-content{padding:65px 0}.hero p{font-size:17px}.photo-grid{grid-template-columns:1fr}.photo-card img{height:250px}.trust-item{font-size:13px}}
   </style>
 </head>
 <body>
@@ -121,12 +146,22 @@
 <section class="hero">
   <div class="container">
     <div class="hero-content">
-      <h1>Seu ambiente mais bonito, confortável e elegante.</h1>
-      <p>Cortinas, persianas e redes de descanso sob medida para sua casa ou empresa.</p>
-      <a class="btn" href="#contato">📲 PEDIR ORÇAMENTO</a>
+      <div class="eyebrow">RC CORTINAS & PERSIANAS</div>
+      <h1>Conforto e elegância sob medida para o seu ambiente.</h1>
+      <p>Cortinas, persianas e redes de descanso para deixar sua casa ou empresa mais bonita, confortável e funcional.</p>
+      <div class="hero-actions">
+        <a class="btn" href="https://wa.me/5511989440125?text=Ol%C3%A1%21%20Vim%20pelo%20Instagram%20da%20Roberto%20Cortinas%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento.">📲 PEDIR ORÇAMENTO</a>
+        <a class="btn outline" href="#trabalhos">Ver nossos trabalhos</a>
+      </div>
     </div>
   </div>
 </section>
+
+<div class="trust-strip"><div class="container trust">
+  <div class="trust-item"><span>📐</span> Sob medida para seu espaço</div>
+  <div class="trust-item"><span>🏠</span> Residencial e comercial</div>
+  <div class="trust-item"><span>💬</span> Orçamento direto pelo WhatsApp</div>
+</div></div>
 
 <section id="produtos">
   <div class="container">
@@ -140,7 +175,7 @@
         <div class="card-body">
           <h3>Cortinas Sob Medida</h3>
           <p>Elegância, aconchego e acabamento personalizado para cada ambiente.</p>
-          <a class="btn dark" href="https://wa.me/5511983189671?text=Ol%C3%A1%21%20Vi%20o%20Instagram%20da%20Roberto%20Cortinas%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20de%20cortinas.">Pedir Orçamento cortinas</a>
+          <a class="btn dark" href="https://wa.me/5511983189671?text=Ol%C3%A1%21%20Vi%20o%20Instagram%20da%20Roberto%20Cortinas%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20de%20cortinas.">Orçar minhas cortinas</a>
         </div>
       </article>
       <article class="card">
@@ -148,7 +183,7 @@
         <div class="card-body">
           <h3>Persianas</h3>
           <p>Praticidade, controle de luminosidade e visual moderno sob medida.</p>
-          <a class="btn dark" href="https://wa.me/5511989440125?text=Ol%C3%A1%21%20Vi%20o%20Instagram%20da%20Roberto%20Cortinas%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20de%20persianas.">Pedir Orçamento persianas</a>
+          <a class="btn dark" href="https://wa.me/5511989440125?text=Ol%C3%A1%21%20Vi%20o%20Instagram%20da%20Roberto%20Cortinas%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20de%20persianas.">Orçar minhas persianas</a>
         </div>
       </article>
       <article class="card">
@@ -156,7 +191,7 @@
         <div class="card-body">
           <h3>Redes de Descanso</h3>
           <p>Conforto e estilo para criar aquele cantinho especial de descanso.</p>
-          <a class="btn dark" href="https://wa.me/5511983189671?text=Ol%C3%A1%21%20Vi%20o%20Instagram%20da%20Roberto%20Cortinas%20e%20quero%20conhecer%20as%20redes%20de%20descanso.">Conhecer redes</a>
+          <a class="btn dark" href="https://wa.me/5511983189671?text=Ol%C3%A1%21%20Vi%20o%20Instagram%20da%20Roberto%20Cortinas%20e%20quero%20conhecer%20as%20redes%20de%20descanso.">Ver redes de descanso</a>
         </div>
       </article>
     </div>
@@ -182,50 +217,52 @@
   <div class="container">
     <div class="section-title">
       <h2>Inspire-se com nossos ambientes</h2>
-      <p>Imagens ilustrativas para apresentar os principais produtos da RC.</p>
+      <p>Conheça alguns modelos e ambientes para encontrar referências para o seu projeto.</p>
     </div>
     <div class="photo-sections">
       <div class="photo-section">
         <div class="photo-section-title"><h3>🪟 Cortinas</h3><p>Modelos e ambientes para inspirar sua escolha.</p></div>
         <div class="photo-grid">
-          <div class="photo-card"><img class="gallery-photo" src="Cortina de Cozinha.jpeg" alt="Cortina para cozinha" onclick="openLightbox(this)"><span>Cortina para cozinha</span></div>
-          <div class="photo-card"><img class="gallery-photo" src="Cortina1.jpeg" alt="Cortina em ambiente residencial" onclick="openLightbox(this)"><span>Cortina em ambiente residencial</span></div>
-          <div class="photo-card"><img class="gallery-photo" src="Cortina.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
-          <div class="photo-card"><img class="gallery-photo" src="Cortinas sob Medida 2.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
-          <div class="photo-card"><img class="gallery-photo" src="Cortinas Sala 3.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
-          <div class="photo-card"><img class="gallery-photo" src="Cortinas Sala 4.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
-          <div class="photo-card"><img class="gallery-photo" src="Cortinas Sala 5.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
-          <div class="photo-card"><img class="gallery-photo" src="Cortinas Sala 6.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
-          <div class="photo-card"><img class="gallery-photo" src="Cortinas Sala 7.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
-          <div class="photo-card"><img class="gallery-photo" src="Cortinas Sala 8.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
-          <div class="photo-card"><img class="gallery-photo" src="Cortinas Sala 9.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
-          <div class="photo-card"><img class="gallery-photo" src="Cortinas Sala 10.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
-          <div class="photo-card"><img class="gallery-photo" src="Cortinas Quarto.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
-          <div class="photo-card"><img class="gallery-photo" src="Cortina Sala.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Cortina de Cozinha.jpeg" alt="Cortina para cozinha" onclick="openLightbox(this)"><span>Cortina para cozinha</span></div>
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Cortina1.jpeg" alt="Cortina em ambiente residencial" onclick="openLightbox(this)"><span>Cortina em ambiente residencial</span></div>
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Cortina.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Cortinas sob Medida 2.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Cortinas Sala 3.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Cortinas Sala 4.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Cortinas Sala 5.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Cortinas Sala 6.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Cortinas Sala 7.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Cortinas Sala 8.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Cortinas Sala 9.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Cortinas Sala 10.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Cortinas Quarto.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Cortina Sala.jpeg" alt="Cortina em sala" onclick="openLightbox(this)"><span>Cortina em sala</span></div>
         </div>
       </div>
       <div class="photo-section">
         <div class="photo-section-title"><h3>☀️ Persianas</h3><p>Opções para controle de luminosidade e privacidade.</p></div>
         <div class="photo-grid">
-          <div class="photo-card"><img class="gallery-photo" src="Persiana.jpeg" alt="Persiana" onclick="openLightbox(this)"><span>Persiana sob medida</span></div>
-          <div class="photo-card"><img class="gallery-photo" src="Persianas 1.jpeg" alt="Persiana vertical" onclick="openLightbox(this)"><span>Persiana vertical</span></div>
-          <div class="photo-card"><img class="gallery-photo" src="Persiana_Rolo3.jpeg" alt="Persiana Rolo" onclick="openLightbox(this)"><span>Persiana Rolo</span></div>   
-          <div class="photo-card"><img class="gallery-photo" src="Persiana_Horizontal 2.jpeg" alt="Persiana Horizontal" onclick="openLightbox(this)"><span>Persiana Horizontal</span></div>
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Persiana.jpeg" alt="Persiana" onclick="openLightbox(this)"><span>Persiana sob medida</span></div>
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Persianas 1.jpeg" alt="Persiana vertical" onclick="openLightbox(this)"><span>Persiana vertical</span></div>
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Persiana_Rolo3.jpeg" alt="Persiana Rolo" onclick="openLightbox(this)"><span>Persiana Rolo</span></div>   
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Persiana_Horizontal 2.jpeg" alt="Persiana Horizontal" onclick="openLightbox(this)"><span>Persiana Horizontal</span></div>
         </div>
       </div>
       <div class="photo-section">
         <div class="photo-section-title"><h3>🌿 Redes de descanso</h3><p>Conforto e estilo para seus momentos de descanso.</p></div>
         <div class="photo-grid">
-          <div class="photo-card"><img class="gallery-photo" src="Redes de Descanso4.jpg" alt="Rede de descanso" onclick="openLightbox(this)"><span>Rede de descanso</span></div>
-          <div class="photo-card"><img class="gallery-photo" src="Redes de Descanso3.jpg" alt="Rede marrom" onclick="openLightbox(this)"><span>Rede em tecido</span></div>
-          <div class="photo-card"><img class="gallery-photo" src="Redes de Descanso2.jpg" alt="Rede em área externa" onclick="openLightbox(this)"><span>Rede para área externa</span></div>
-          <div class="photo-card"><img class="gallery-photo" src="Redes de Descanso1.jpg" alt="Rede na praia" onclick="openLightbox(this)"><span>Rede em área externa</span></div>
-          <div class="photo-card"><img class="gallery-photo" src="Redes de Descanso.jpg" alt="Rede branca" onclick="openLightbox(this)"><span>Rede branca</span></div>
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Redes de Descanso4.jpg" alt="Rede de descanso" onclick="openLightbox(this)"><span>Rede de descanso</span></div>
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Redes de Descanso3.jpg" alt="Rede marrom" onclick="openLightbox(this)"><span>Rede em tecido</span></div>
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Redes de Descanso2.jpg" alt="Rede em área externa" onclick="openLightbox(this)"><span>Rede para área externa</span></div>
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Redes de Descanso1.jpg" alt="Rede na praia" onclick="openLightbox(this)"><span>Rede em área externa</span></div>
+          <div class="photo-card"><img loading="lazy" class="gallery-photo" src="Redes de Descanso.jpg" alt="Rede branca" onclick="openLightbox(this)"><span>Rede branca</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<section style="padding:34px 0 10px;background:var(--cream)"><div class="container" style="text-align:center"><a class="btn" href="https://wa.me/5511989440125?text=Ol%C3%A1%21%20Vi%20as%20fotos%20da%20Roberto%20Cortinas%20e%20gostaria%20de%20receber%20um%20or%C3%A7amento.">💬 Gostei de um modelo — quero orçamento</a></div></section>
 
 <section class="cta">
   <div class="container">
@@ -267,7 +304,7 @@
 
 <footer>
   <div class="container">
-    <p>© 2026 Roberto Cortinas & Persianas • Instagram: @roberto_cortinasepersianas</p>
+    <div class="footer-line"><span>© 2026 Roberto Cortinas & Persianas</span><strong>@roberto_cortinasepersianas</strong><span>• Atendimento via WhatsApp</span></div>
   </div>
 </footer>
 
