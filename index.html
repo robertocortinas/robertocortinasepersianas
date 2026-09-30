@@ -45,9 +45,6 @@
     .gallery-item{background:white;border-radius:14px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,.07)}
     .gallery-item>div:first-child{height:280px;background-size:cover;background-position:center}
     .gallery-label{padding:16px 18px;font-weight:800;font-size:18px}
-    .g1{background-image:url('cortina.jpg')}
-    .g2{background-image:url('persiana.jpg')}
-    .g3{background-image:url('rede.jpg')}
     .photo-sections{display:flex;flex-direction:column;gap:48px}
     .photo-section{background:white;border-radius:16px;padding:28px;box-shadow:0 8px 25px rgba(0,0,0,.06)}
     .photo-section-title{margin-bottom:22px}
@@ -84,6 +81,27 @@
       .gallery-item>div:first-child{height:230px}
       section{padding:55px 0}
       .cta h2{font-size:31px}
+    }
+
+    /* Ajustes finais de responsividade e conversão */
+    .btn{cursor:pointer;text-align:center}
+    .float{display:flex;align-items:center;gap:7px}
+    .photo-card{cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
+    .photo-card:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,0,0,.10)}
+    @media(max-width:800px){
+      .photo-grid{grid-template-columns:1fr}
+      .photo-card img{height:260px}
+      .float{right:14px;bottom:14px;padding:13px 16px}
+    }
+    @media(max-width:480px){
+      .hero-content{padding:65px 0}
+      h1{font-size:40px}
+      .hero p{font-size:17px}
+      .features{grid-template-columns:1fr}
+      .photo-section{padding:20px}
+      .photo-section-title h3{font-size:24px}
+      .photo-card img{height:240px}
+      .float{font-size:14px}
     }
   </style>
 </head>
@@ -122,7 +140,7 @@
         <div class="card-body">
           <h3>Cortinas Sob Medida</h3>
           <p>Elegância, aconchego e acabamento personalizado para cada ambiente.</p>
-          <a class="btn dark" href="https://wa.me/5511983189671?text=Ol%C3%A1%21%20Vi%20o%20Instagram%20da%20Roberto Cortinas%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20de%20cortinas.">Pedir Orçamento cortinas</a>
+          <a class="btn dark" href="https://wa.me/5511983189671?text=Ol%C3%A1%21%20Vi%20o%20Instagram%20da%20Roberto%20Cortinas%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20de%20cortinas.">Pedir Orçamento cortinas</a>
         </div>
       </article>
       <article class="card">
@@ -130,7 +148,7 @@
         <div class="card-body">
           <h3>Persianas</h3>
           <p>Praticidade, controle de luminosidade e visual moderno sob medida.</p>
-          <a class="btn dark" href="https://wa.me/5511989440125?text=Ol%C3%A1%21%20Vi%20o%20Instagram%20da%20Roberto Cortinas%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20de%20persianas.">Pedir Orçamento persianas</a>
+          <a class="btn dark" href="https://wa.me/5511989440125?text=Ol%C3%A1%21%20Vi%20o%20Instagram%20da%20Roberto%20Cortinas%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20de%20persianas.">Pedir Orçamento persianas</a>
         </div>
       </article>
       <article class="card">
@@ -138,7 +156,7 @@
         <div class="card-body">
           <h3>Redes de Descanso</h3>
           <p>Conforto e estilo para criar aquele cantinho especial de descanso.</p>
-          <a class="btn dark" href="https://wa.me/5511983189671?text=Ol%C3%A1%21%20Vi%20o%20Instagram%20da%20Roberto Cortinas%20e%20quero%20conhecer%20as%20redes%20de%20descanso.">Conhecer redes</a>
+          <a class="btn dark" href="https://wa.me/5511983189671?text=Ol%C3%A1%21%20Vi%20o%20Instagram%20da%20Roberto%20Cortinas%20e%20quero%20conhecer%20as%20redes%20de%20descanso.">Conhecer redes</a>
         </div>
       </article>
     </div>
@@ -200,7 +218,7 @@
   <div class="container">
     <h2>Vamos transformar seu ambiente?</h2>
     <p>Envie uma foto do ambiente pelo WhatsApp e conte o que você procura. Nossa equipe ajuda você a encontrar a solução ideal.</p>
-    <a class="btn" href="https://wa.me/5511989440125?text=Ol%C3%A1%21%20Vi%20o%20Instagram%20da%20Roberto Cortinas%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento.">📲 QUERO MEU ORÇAMENTO</a>
+    <a class="btn" href="https://wa.me/5511989440125?text=Ol%C3%A1%21%20Vi%20o%20Instagram%20da%20Roberto%20Cortinas%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento.">📲 QUERO MEU ORÇAMENTO</a>
   </div>
 </section>
 
@@ -213,15 +231,15 @@
     <div class="contacts">
       <div class="contact">
         <div class="role">Vendedora</div><h3>Bianca</h3><p>(11) 98318-9671</p>
-        <a class="btn" href="https://wa.me/5511983189671?text=Ol%C3%A1%20Bianca%21%20Vim%20pelo%20Instagram%20da%20Roberto Cortinas%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento.">WhatsApp Bianca</a>
+        <a class="btn" href="https://wa.me/5511983189671?text=Ol%C3%A1%20Bianca%21%20Vim%20pelo%20Instagram%20da%20Roberto%20Cortinas%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento.">WhatsApp Bianca</a>
       </div>
       <div class="contact">
         <div class="role">Vendedor</div><h3>Roberto</h3><p>(11) 98944-0125</p>
-        <a class="btn" href="https://wa.me/5511989440125?text=Ol%C3%A1%20Roberto%21%20Vim%20pelo%20Instagram%20da%20Roberto Cortinas%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento.">WhatsApp Roberto</a>
+        <a class="btn" href="https://wa.me/5511989440125?text=Ol%C3%A1%20Roberto%21%20Vim%20pelo%20Instagram%20da%20Roberto%20Cortinas%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento.">WhatsApp Roberto</a>
       </div>
       <div class="contact">
         <div class="role">Suporte</div><h3>Henrique</h3><p>(11) 99444-5365</p>
-        <a class="btn" href="https://wa.me/5511994445365?text=Ol%C3%A1%20Henrique%21%20Vim%20pelo%20Instagram%20da%20Roberto Cortinas%20e%20preciso%20de%20suporte.">WhatsApp Henrique</a>
+        <a class="btn" href="https://wa.me/5511994445365?text=Ol%C3%A1%20Henrique%21%20Vim%20pelo%20Instagram%20da%20Roberto%20Cortinas%20e%20preciso%20de%20suporte.">WhatsApp Henrique</a>
       </div>
     </div>
   </div>
@@ -240,7 +258,7 @@
   </div>
 </footer>
 
-<a class="float" href="https://wa.me/5511989440125?text=Ol%C3%A1%21%20Vim%20pelo%20Instagram%20da%20Roberto Cortinas%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento.">💬 WhatsApp</a>
+<a class="float" href="https://wa.me/5511989440125?text=Ol%C3%A1%21%20Vim%20pelo%20Instagram%20da%20Roberto%20Cortinas%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento.">💬 WhatsApp</a>
 
 <script>
 function openLightbox(img){
